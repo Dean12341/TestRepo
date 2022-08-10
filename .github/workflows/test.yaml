@@ -16,7 +16,7 @@ jobs:
     steps:
     - name : check out repo
       uses: actions/checkout@v3
-    - run: chmod + xbuildScript.sh 
+    - run: chmod +x buildScript.sh 
     - run: ./buildScript.sh
     - run: ls
       
