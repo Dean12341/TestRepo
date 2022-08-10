@@ -7,10 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     #command to get files on the ubuntu machine
-    -name: Check out repo
-     uses:actions/checkout@v3
-    -runs: touch testyaml.py
-    -runs: ls
+    - name: Check out repo
+      uses:actions/checkout@v3
+    - run: touch testyaml.py
+    - run: ls
     
       
 
