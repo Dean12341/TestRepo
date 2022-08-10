@@ -11,7 +11,15 @@ jobs:
       uses: actions/checkout@v3
     - run: touch testyaml.py
     - run: ls
-    
+  build_job:
+    runs-on: ubuntu-latest
+    steps:
+    - name : check out repo
+      uses: actions/checkout@v3
+    - run: chmod + xbuildScript.sh 
+    - run: ./buildScript.sh
+    - run: ls
+      
       
 
     
