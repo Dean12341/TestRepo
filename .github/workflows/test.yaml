@@ -1,6 +1,8 @@
 name: test workflow
 on: [push]
 #Jobs that are part of workflow:
+deploy_vars:
+  testdeploy: this is a global var
 jobs:
   Test_Ex:
     #runs on ubuntu machine
@@ -19,6 +21,18 @@ jobs:
     - run: chmod +x buildScript.sh 
     - run: ./buildScript.sh
     - run: ls
+  deploy_job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out repo
+      uses: actions/checkout@v3
+    - run: echo "$testdeploy"
+    - run: chmod +x deployScript.sh
+    - run: ./deployScript.sh
+    - run: ls
+    
+      
+     
       
       
 
