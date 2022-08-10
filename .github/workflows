@@ -1,1 +1,14 @@
-
+name: test workflow
+on: [push]
+#Jobs that are part of workflow:
+jobs:
+  Test_Ex:
+    #runs on ubuntu machine
+    runs-on: ubuntu-latest
+    steps:
+    #command to get files on the ubuntu machine
+    -name: Check out repo
+      uses: actions/checkout@v3
+    -run: touch testfile.py
+    -run: ls
+    
