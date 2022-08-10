@@ -1,7 +1,7 @@
 name: test workflow
 on: [push]
 #Jobs that are part of workflow:
-deploy vars:
+deploy_job:
   testdeploy: this is a global var
 jobs:
   Test_Ex:
