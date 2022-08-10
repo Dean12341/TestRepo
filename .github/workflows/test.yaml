@@ -8,7 +8,7 @@ jobs:
     steps:
     #command to get files on the ubuntu machine
     -name: Check out repo
-      uses: actions/checkout@v3
+       uses:actions/checkout@v3
     -run: touch testfile.py
     -run: ls
     
